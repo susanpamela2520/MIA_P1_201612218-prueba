@@ -1,0 +1,150 @@
+#-----------------
+# Parte 2 - SISTEMA DE ARCHIVOS
+#----------------
+
+#CONFIGURACION INICIAL
+mkdisk -size=112 -unit=M
+fdisk -type=P -unit=M -name=Part1 -size=25 -driveletter=a
+fdisk -type=P -unit=M -name=Part2 -size=25 -driveletter=a
+fdisk -type=P -unit=M -name=Part3 -size=25 -driveletter=a
+fdisk -type=P -unit=M -name=Part4 -size=25 -driveletter=a
+mount -driveletter=a -name=Part1
+mount -driveletter=a -name=Part2
+mount -driveletter=a -name=Part3
+mount -driveletter=a -name=Part4
+
+#MKFS A PARTICIONES
+mkfs -type=full -id=a1xx
+mkfs -type=full -id=a2xx -fs=3fs
+
+#REPORTES INICIALES
+rep -id=a1xx -Path="/home/parte2/inicial/ext2_sb_1.pdf" -name=sb
+rep -id=a1xx -Path="/home/parte2/inicial/ext2_tree_1.pdf" -name=tree
+
+rep -id=a2xx -Path="/home/parte2/inicial/ext3_sb_1.pdf" -name=sb
+rep -id=a2xx -Path="/home/parte2/inicial/ext3_tree_1.pdf" -name=tree
+PAUSE
+#INICIO DE SESION
+
+#Debe dar error porque no existe el usuario roca
+Login -pass=567 -user=roca -id=a1xx
+PAUSE
+#Debe dar error porque no existe nada activo
+logout
+PAUSE
+Login -pass=123 -user=root -id=a1xx
+
+pause
+
+#CREACION DE GRUPOS
+mkgrp -naMe=Archivos
+mkgrp -NamE=Arqui
+mkgrp -name="Orga"
+
+#Validar cambios en el archivo
+#Cat -file1=/users.txt
+pause
+
+#ELIMINACION DE GRUPOS
+rmgrp -name=Arqui
+
+#Validar cambios en el archivo
+#Cat -file1=/users.txt
+pause
+#CREACION DE USUARIOS
+Mkusr -user="user1" -grp=root -pass=user1
+Mkusr -user="user2" -grp="Orga" -pass=user2
+Mkusr -user="user3" -grp="Orga" -pass=user3
+Mkusr -user="user4" -grp="Orga" -pass=user4
+
+#Validar cambios en el archivo
+#Cat -file1=/users.txt
+pause
+#ELIMINACION DE USUARIOS
+rmusr -user="user3"
+
+#Validar cambios en el archivo
+#Cat -file1=/users.txt
+pause
+#CAMBIAR USUARIO DE GRUPO
+#chgrp -user="user4" -grp=Archivos
+
+#Validar cambios en el archivo
+#Cat -file1=/users.txt
+
+pause
+
+#CREACION DE CARPETAS
+Mkdir -P -path=/home/archivos/mia/fase2
+Mkdir -P -path=/home/archivos/mia/carpeta2
+Mkdir -P -path=/home/archivos/mia/z
+Mkdir -P -path=/home/archivos/mia/carpeta3/carpeta7/carpeta8/carpeta9/carpeta10/carpeta11
+Mkdir -P -path=/home/archivos/mia/carpeta4/carpeta7/carpeta8/carpeta9/carpeta10/carpeta11/carpeta7/carpeta8/carpeta9/carpeta10/carpeta11
+Mkdir -path=/home/archivos/mia/carpeta2/a1
+Mkdir -path=/home/archivos/mia/carpeta2/a2
+Mkdir -path=/home/archivos/mia/carpeta2/a3
+Mkdir -path=/home/archivos/mia/carpeta2/a4
+Mkdir -path=/home/archivos/mia/carpeta2/a5
+Mkdir -path=/home/archivos/mia/carpeta2/a6
+Mkdir -path=/home/archivos/mia/carpeta2/a7
+Mkdir -path=/home/archivos/mia/carpeta2/a8
+Mkdir -path=/home/archivos/mia/carpeta2/a9
+Mkdir -path=/home/archivos/mia/carpeta2/a10
+Mkdir -path=/home/archivos/mia/fase2/a1
+Mkdir -path=/home/archivos/mia/fase2/a2
+Mkdir -path=/home/archivos/mia/fase2/a3
+Mkdir -path=/home/archivos/mia/fase2/a4
+Mkdir -path=/home/archivos/mia/fase2/a5
+Mkdir -path=/home/archivos/mia/fase2/a6
+Mkdir -path=/home/archivos/mia/fase2/a7
+Mkdir -path=/home/archivos/mia/fase2/a8
+Mkdir -path=/home/archivos/mia/fase2/a9
+Mkdir -path=/home/archivos/mia/fase2/a10
+Mkdir -path=/home/archivos/mia/fase2/a11
+Mkdir -path=/home/archivos/mia/fase2/a12
+Mkdir -path=/home/archivos/mia/fase2/a13
+Mkdir -path=/home/archivos/mia/fase2/a14
+Mkdir -path=/home/archivos/mia/fase2/a15
+Mkdir -path=/home/archivos/mia/fase2/a16
+Mkdir -path=/home/archivos/mia/fase2/a17
+Mkdir -path=/home/archivos/mia/fase2/a18
+Mkdir -path=/home/archivos/mia/fase2/a19
+Mkdir -path=/home/archivos/mia/fase2/a20
+Mkdir -path=/home/archivos/mia/fase2/a21
+Mkdir -path=/home/archivos/mia/fase2/a22
+Mkdir -path=/home/archivos/mia/fase2/a23
+Mkdir -path=/home/archivos/mia/fase2/a24
+Mkdir -path=/home/archivos/mia/fase2/a25
+Mkdir -path=/home/archivos/mia/fase2/a26
+Mkdir -path=/home/archivos/mia/fase2/a27
+Mkdir -path=/home/archivos/mia/fase2/a28
+Mkdir -path=/home/archivos/mia/fase2/a29
+Mkdir -path=/home/archivos/mia/fase2/a30
+Mkdir -path=/home/archivos/mia/fase2/a31
+Mkdir -path=/home/archivos/mia/fase2/a32
+Mkdir -path=/home/archivos/mia/fase2/a33
+Mkdir -path=/home/archivos/mia/fase2/a34
+Mkdir -path=/home/archivos/mia/fase2/a35
+Mkdir -path=/home/archivos/mia/fase2/a36
+Mkdir -path=/home/archivos/mia/fase2/a37
+Mkdir -path=/home/archivos/mia/fase2/a38
+Mkdir -path=/home/archivos/mia/fase2/a39
+Mkdir -path=/home/archivos/mia/fase2/a40
+Mkdir -path=/home/archivos/mia/fase2/a41
+Mkdir -path=/home/archivos/mia/fase2/a42
+Mkdir -path=/home/archivos/mia/fase2/a43
+Mkdir -path=/home/archivos/mia/fase2/a44
+Mkdir -path=/home/archivos/mia/fase2/a45
+Mkdir -path=/home/archivos/mia/fase2/a46
+#Debe dar error porque ya existe a46
+Mkdir -path=/home/archivos/mia/fase2/a46
+pause
+
+
+#REPORTES PARA VERIFICAR INDIRECTOS
+rep -id=a1xx -Path="/home/parte2/mkdir_ind/ext2_sb_1.pdf" -name=sb
+rep -id=a1xx -Path="/home/parte2/mkdir_ind/ext2_tree_1.pdf" -name=tree
+pause
+
+
+exit

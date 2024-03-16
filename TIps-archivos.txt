@@ -1,0 +1,31 @@
+Instalar linux
+Instalar Go
+   * https://go.dev/doc/install
+Abrir una terminal y ejecutar: sudo chmod 777 /home
+Iniciar proyecto con el comando: go run *.go
+Ejecutar archivo de entrada: execute -path=rutaDelArchivo
+
+Comando realizado
+mkdisk
+rmdisk
+  * No se realizaron particiones logicas.
+fdisk
+mount
+  * Leer enunciado para entender la estructura al momento de montar.
+unmount
+mkfs
+login
+logout
+mkgrp
+rmgrp
+mkusr
+rmusr
+cat
+  * Tomar en cuenta que este comando se hace automaticamente despues de realizar un mkgrp, rmgrp, mkusr y rmusr por si pregunta el auxiliar.
+mkdir
+exucute
+exit
+pause
+rep
+  * Journaling, ls y file fueron los unicos reportes que no se realizaron.
+  * El reporte tree ejecutarse en graphviz online debido a que es demasiada informacion no se puede ver la imagen.
